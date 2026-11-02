@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Reyes | Web Developer Portfolio, Accessible Websites</title>
+  <meta name="description" content="Portfolio of Jordan Reyes, a web development student building fast, accessible, responsive websites. Browse projects, view screenshots and get in touch.">
+  <meta name="author" content="Jordan Reyes">
+  <meta property="og:title" content="Jordan Reyes | Web Developer Portfolio, Accessible Websites">
+  <meta property="og:description" content="Portfolio of Jordan Reyes, a web development student building fast, accessible, responsive websites. Browse projects, view screenshots and get in touch.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="part3.css">
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__name" href="index.html">Jordan Reyes</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero">
+      <p class="hero__status"><span class="status-dot" aria-hidden="true"></span>Currently building web projects &amp; open to opportunities</p>
+      <h1 class="hero__name">Jordan Reyes</h1>
+      <p class="hero__role">Web Development Student</p>
+      <p class="hero__lede">I build interfaces that load fast, work on any screen, and hold up when someone actually tries to use them &mdash; not just when they look good in a screenshot.</p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="#projects">See my projects</a>
+        <a class="button button--ghost" href="enquiry.html">Get a quote</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about__text">
+        <h2>About</h2>
+        <p>I'm a web development student focused on the fundamentals: semantic HTML, CSS that scales, and code that's easy for the next person to read. This site is hand-built, with no framework and no template.</p>
+        <div class="accordion">
+          <h3 class="accordion__heading"><button class="accordion__trigger" id="acc-1-btn" aria-expanded="false" aria-controls="acc-1">Accessibility first</button></h3>
+          <div class="accordion__panel" id="acc-1" role="region" aria-labelledby="acc-1-btn" hidden><p>Keyboard navigation, readable contrast and clear focus states are built in from the first commit, not added at the end.</p></div>
+          <h3 class="accordion__heading"><button class="accordion__trigger" id="acc-2-btn" aria-expanded="false" aria-controls="acc-2">Mobile before desktop</button></h3>
+          <div class="accordion__panel" id="acc-2" role="region" aria-labelledby="acc-2-btn" hidden><p>Layouts are tested at 375px wide first, then widened with media queries.</p></div>
+          <h3 class="accordion__heading"><button class="accordion__trigger" id="acc-3-btn" aria-expanded="false" aria-controls="acc-3">Version control</button></h3>
+          <div class="accordion__panel" id="acc-3" role="region" aria-labelledby="acc-3-btn" hidden><p>Every change is committed to GitHub with a descriptive message and logged in the README changelog.</p></div>
+        </div>
+      </div>
+      <div class="about__snippet" aria-hidden="true">
+        <div class="snippet__bar"><span></span><span></span><span></span></div>
+        <pre class="snippet__code"><code>const focus = [
+  "accessibility",
+  "performance",
+  "clean markup"
+];</code></pre>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="toolbar">
+        <div class="field"><label for="project-search">Search projects</label><input type="search" id="project-search" placeholder="e.g. responsive"></div>
+        <div class="field"><label for="project-tag">Filter by skill</label><select id="project-tag"><option value="">All skills</option></select></div>
+        <div class="field"><label for="project-sort">Sort by</label><select id="project-sort"><option value="newest">Newest first</option><option value="title">Title A&ndash;Z</option></select></div>
+      </div>
+      <p id="project-count" class="toolbar__count" role="status" aria-live="polite"></p>
+      <ul class="project-list" id="project-list"></ul>
+      <noscript><p>Enable JavaScript to browse the project list.</p></noscript>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <p class="gallery__intro">Select a screenshot to view it full size.</p>
+      <ul class="gallery__grid">
+        <li><button class="gallery__item" data-src="images/portfolio-homepage-desktop.svg" data-alt="Desktop view of the portfolio homepage with the hero section and navigation"><img src="images/portfolio-homepage-desktop.svg" alt="Desktop view of the portfolio homepage with the hero section and navigation" width="800" height="500" loading="lazy"></button></li>
+        <li><button class="gallery__item" data-src="images/portfolio-mobile-menu.svg" data-alt="Mobile view of the portfolio at 375 pixels wide with a stacked navigation"><img src="images/portfolio-mobile-menu.svg" alt="Mobile view of the portfolio at 375 pixels wide with a stacked navigation" width="800" height="500" loading="lazy"></button></li>
+        <li><button class="gallery__item" data-src="images/enquiry-form-validation.svg" data-alt="Enquiry form showing a validation error message under the email field"><img src="images/enquiry-form-validation.svg" alt="Enquiry form showing a validation error message under the email field" width="800" height="500" loading="lazy"></button></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul class="tag-list tag-list--large">
+        <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JavaScript</li><li class="tag">Responsive Design</li>
+        <li class="tag">Git &amp; GitHub</li><li class="tag">Accessibility</li><li class="tag">SEO</li><li class="tag">Leaflet</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Have a project in mind, or just want to talk shop? Use the <a class="inline-link" href="contact.html">contact form</a> or ask for a price on the <a class="inline-link" href="enquiry.html">enquiry page</a>.</p>
+      <ul class="contact__list">
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <figure><img id="lightbox-img" src="" alt=""><figcaption id="lightbox-cap"></figcaption></figure>
+    <div class="lightbox__controls">
+      <button type="button" id="lb-prev" class="button button--ghost">Previous</button>
+      <button type="button" id="lb-next" class="button button--ghost">Next</button>
+      <button type="button" id="lb-close" class="button button--primary">Close</button>
+    </div>
+  </dialog>
+  <footer class="site-footer">
+    <p>&copy; 2026 Jordan Reyes. Built by hand with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

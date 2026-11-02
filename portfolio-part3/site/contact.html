@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Jordan Reyes | Send a Message</title>
+  <meta name="description" content="Send Jordan Reyes a message about a project, feedback or a general question. Find the location on the map.">
+  <meta name="author" content="Jordan Reyes">
+  <meta property="og:title" content="Contact Jordan Reyes | Send a Message">
+  <meta property="og:description" content="Send Jordan Reyes a message about a project, feedback or a general question. Find the location on the map.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="part3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__name" href="index.html">Jordan Reyes</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-intro"><h1>Contact</h1><p>Send a general message and your email app will open with it ready to send.</p></section>
+    <section class="form-section">
+      <form id="contact-form" class="form" novalidate>
+        <div class="field"><label for="c-name">Full name</label><input id="c-name" name="name" type="text" required minlength="2" maxlength="60" autocomplete="name"><p class="field__error" id="c-name-error"></p></div>
+        <div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" required autocomplete="email"><p class="field__error" id="c-email-error"></p></div>
+        <div class="field"><label for="c-phone">Phone (optional)</label><input id="c-phone" name="phone" type="tel" data-phone autocomplete="tel"><p class="field__error" id="c-phone-error"></p></div>
+        <div class="field"><label for="c-type">Type of message</label>
+          <select id="c-type" name="type" required><option value="">Choose one</option><option>General question</option><option>Job or internship</option><option>Feedback on this site</option><option>Collaboration</option></select><p class="field__error" id="c-type-error"></p></div>
+        <div class="field"><label for="c-message">Message</label><textarea id="c-message" name="message" rows="6" required minlength="20" maxlength="1000"></textarea><p class="field__error" id="c-message-error"></p></div>
+        <button class="button button--primary" type="submit">Prepare email</button>
+      </form>
+      <div id="contact-result" class="result" role="status" aria-live="polite" hidden></div>
+    </section>
+    <section class="map-section"><h2>Where I'm based</h2>
+      <div id="map" class="map" role="region" aria-label="Map showing Rosebank, Johannesburg"></div>
+      <p class="map__credit">Map data &copy; OpenStreetMap contributors.</p></section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <footer class="site-footer">
+    <p>&copy; 2026 Jordan Reyes. Built by hand with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

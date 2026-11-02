@@ -1,0 +1,67 @@
+/* =========================================================
+   PART 3 ADDITIONS (loads after style.css)
+   ========================================================= */
+.nav__links a[aria-current="page"] { color: var(--accent); }
+.inline-link { color: var(--accent); border-bottom: 1px solid currentColor; }
+.page-intro { padding-bottom: 1rem; }
+.page-intro h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); margin-bottom: 1rem; }
+.page-intro p { color: var(--ink-soft); }
+.form-section, .map-section { padding-top: 1rem; }
+
+/* Forms */
+.form { display: grid; gap: 1.25rem; max-width: 34rem; }
+.field { display: flex; flex-direction: column; gap: 0.35rem; }
+.field label { font-weight: 500; font-size: 0.95rem; }
+input, select, textarea {
+  font: inherit; color: var(--ink); background: #fff;
+  border: 1px solid var(--border); border-radius: 2px; padding: 0.65rem 0.8rem; width: 100%;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible, .gallery__item:focus-visible, .accordion__trigger:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+[aria-invalid="true"] { border-color: #b3261e; }
+.field__error { color: #b3261e; font-size: 0.875rem; min-height: 1.2em; }
+.result { margin-top: 2rem; padding: 1.25rem 1.5rem; max-width: 34rem; background: var(--bg-alt); border-left: 3px solid var(--accent); animation: reveal 0.3s ease; }
+.result h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.result p + p { margin-top: 0.5rem; }
+.result .button { margin-top: 1rem; }
+
+/* Accordion */
+.accordion { margin-top: 1.75rem; border-top: 1px solid var(--border); }
+.accordion__heading { font-size: 1rem; font-family: var(--font-body); border-bottom: 1px solid var(--border); }
+.accordion__trigger {
+  all: unset; box-sizing: border-box; display: flex; justify-content: space-between; width: 100%;
+  padding: 0.9rem 0; cursor: pointer; font-weight: 500;
+}
+.accordion__trigger::after { content: "+"; font-family: var(--font-mono); transition: transform 0.2s ease; }
+.accordion__trigger[aria-expanded="true"]::after { content: "\2212"; }
+.accordion__panel { padding: 0 0 1rem; color: var(--ink-soft); }
+.accordion__panel:not([hidden]) { animation: reveal 0.25s ease; }
+@keyframes reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* Project toolbar */
+.toolbar { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.toolbar__count { color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 1rem; }
+.project__empty { padding: 2rem 0; color: var(--ink-soft); }
+
+/* Gallery + lightbox */
+.gallery__intro { color: var(--ink-soft); margin-bottom: 1.5rem; }
+.gallery__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+.gallery__item { all: unset; display: block; cursor: zoom-in; border: 1px solid var(--border); overflow: hidden; border-radius: 2px; }
+.gallery__item img { width: 100%; height: auto; transition: transform 0.3s ease; }
+.gallery__item:hover img { transform: scale(1.04); }
+.lightbox { border: 0; padding: 1rem; max-width: min(56rem, 92vw); background: var(--bg); border-radius: 4px; }
+.lightbox::backdrop { background: rgba(22, 24, 29, 0.8); }
+.lightbox[open] { animation: reveal 0.25s ease; }
+.lightbox img { width: 100%; height: auto; }
+.lightbox figcaption { margin-top: 0.75rem; color: var(--ink-soft); font-size: 0.9rem; }
+.lightbox__controls { display: flex; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
+
+/* Map */
+.map { height: 22rem; border: 1px solid var(--border); border-radius: 2px; margin-top: 1rem; }
+.map__credit { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.5rem; }
+
+@media (max-width: 640px) {
+  .toolbar { grid-template-columns: 1fr; }
+  .map { height: 16rem; }
+}

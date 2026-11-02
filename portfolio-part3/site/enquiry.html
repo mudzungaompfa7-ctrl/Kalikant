@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Enquiry | Get a Price Estimate from Jordan Reyes</title>
+  <meta name="description" content="Tell Jordan Reyes about your website project and get an instant price estimate based on type, pages and deadline.">
+  <meta name="author" content="Jordan Reyes">
+  <meta property="og:title" content="Website Enquiry | Get a Price Estimate from Jordan Reyes">
+  <meta property="og:description" content="Tell Jordan Reyes about your website project and get an instant price estimate based on type, pages and deadline.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="part3.css">
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__name" href="index.html">Jordan Reyes</a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-intro"><h1>Website enquiry</h1><p>Describe your project and get an instant estimate. Prices are indicative and confirmed after a short chat.</p></section>
+    <section class="form-section">
+      <form id="enquiry-form" class="form" novalidate>
+        <div class="field"><label for="e-name">Full name</label><input id="e-name" name="name" type="text" required minlength="2" maxlength="60" autocomplete="name"><p class="field__error" id="e-name-error"></p></div>
+        <div class="field"><label for="e-email">Email address</label><input id="e-email" name="email" type="email" required autocomplete="email"><p class="field__error" id="e-email-error"></p></div>
+        <div class="field"><label for="e-service">Type of website</label>
+          <select id="e-service" name="service" required><option value="">Choose one</option><option value="landing">Landing page</option><option value="portfolio">Portfolio</option><option value="business">Small business site</option><option value="shop">Simple online shop</option></select><p class="field__error" id="e-service-error"></p></div>
+        <div class="field"><label for="e-pages">Number of pages (1&ndash;20)</label><input id="e-pages" name="pages" type="number" min="1" max="20" step="1" required inputmode="numeric"><p class="field__error" id="e-pages-error"></p></div>
+        <div class="field"><label for="e-deadline">Deadline</label><input id="e-deadline" name="deadline" type="date" required><p class="field__error" id="e-deadline-error"></p></div>
+        <button class="button button--primary" type="submit">Get my estimate</button>
+      </form>
+      <div id="enquiry-result" class="result" role="status" aria-live="polite" hidden></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 Jordan Reyes. Built by hand with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
